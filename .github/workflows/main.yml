@@ -33,9 +33,6 @@ jobs:
       # Step 5: Deploy to Azure Web App
       - name: Login to Azure
         uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.29dd5e15-f8b6-41d6-a972-b066718e145b }}
-          tenant-id: ${{ secrets.391ffc51-be99-4961-871d-95b34bd4f8c7 }}
-          client-secret: ${{ secrets.768f3ea3-97fc-40d0-94a0-163f89a4684f }}
+
 
 
