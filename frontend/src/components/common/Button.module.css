@@ -22,6 +22,54 @@
   color: #ffffff !important;
 }
 
+/* Toggle Button */
+.toggleButton {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #FFA500; /* Orange background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleButton:hover {
+  background-color: #e69500; /* Darker orange on hover */
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #000000; /* Black background for the layout */
+  color: #ffffff; /* White text color for elements */
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #ffffff; /* White background for the layout */
+  color: #000000; /* Black text color for elements */
+}
+
+/* Adjust header in dark/light modes */
+.dark-mode .header {
+  background-color: #000000;
+}
+
+.light-mode .header {
+  background-color: #f2f2f2;
+}
+
+.dark-mode .headerTitle {
+  color: #FFA500;
+}
+
+.light-mode .headerTitle {
+  color: #242424;
+}
+
 .historyButtonRoot {
   width: 180px;
   border: 1px solid #d1d1d1;
