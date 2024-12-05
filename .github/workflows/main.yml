@@ -28,7 +28,7 @@ jobs:
       # Step 4: Build the frontend
       - name: Build frontend
         working-directory: frontend
-        run: npm run build
+        run: npm run src
 
       # Step 5: Deploy to Azure Web App
       - name: Deploy to Azure Web App
