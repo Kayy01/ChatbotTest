@@ -49,6 +49,7 @@ class _UiSettings(BaseSettings):
     favicon: str = "/favicon.ico"
     show_share_button: bool = True
     show_chat_history_button: bool = True
+    app_settings.ui.dark_mode_enabled = True  # Example feature
 
 
 class _ChatHistorySettings(BaseSettings):
