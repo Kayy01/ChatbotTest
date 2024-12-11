@@ -102,6 +102,23 @@
   color: #242424;
 }
 
+.toggleButton {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #FFA500;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 @media (max-width: 480px) {
   .headerTitleContainer {
     margin-left: 4px;
