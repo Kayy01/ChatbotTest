@@ -93,4 +93,8 @@
     width: auto;
     padding: 0 8px;
   }
+   .toogleButton {
+    width: auto;
+    padding: 5px 8px;
+  }
 }
