@@ -6,9 +6,7 @@ on:
     - main
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -19,14 +17,17 @@ jobs:
         username: ${{ secrets.SAMPLEAPP_ACR_USERNAME }}
         # Container registry password
         password: ${{ secrets.SAMPLEAPP_ACR_PASSWORD }}
-        # Container registry server url
+        # Container registry server URL
         login-server: sampleappaoaichatgpt.azurecr.io
         
     - uses: actions/checkout@v3
+
     - name: Build the Docker image
-      run:         
-        docker build . --file WebApp.Dockerfile --tag sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
-        docker tag sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:latest;
-        docker push sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
-        docker push sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:latest;
+      run: |
+        IMAGE_TAG=$(date +'%Y-%m-%d')_${GITHUB_RUN_NUMBER}
+        docker build . --file WebApp.Dockerfile --tag sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:$IMAGE_TAG
+        docker tag sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:$IMAGE_TAG sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:latest
+        docker push sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:$IMAGE_TAG
+        docker push sampleappaoaichatgpt.azurecr.io/sample-app-aoai-chatgpt:latest
+
       
