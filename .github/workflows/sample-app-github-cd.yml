@@ -55,11 +55,18 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
+      - name: Install Azure CLI
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+      - name: Set Azure environment
+        run: az cloud set --name AzureCloud
+
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          auth-type: 'IDENTITY'  # Use MSI for authentication
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}  # Ensure subscription ID is set
+          auth-type: 'MSI'
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
