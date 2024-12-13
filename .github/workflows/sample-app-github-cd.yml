@@ -1,8 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
-
-name: Build and deploy Python app to Azure Web App - Chatbot-in-Testing
+name: Build and deploy Python app to Azure Web App
 
 on:
   push:
@@ -15,10 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python version
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
@@ -29,8 +24,8 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
-      - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+      - name: Archive project files
+        run: zip -r release.zip .
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
@@ -42,10 +37,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
 
-    permissions:
-      id-token: write  # Required for OIDC
-      contents: read   # Required for artifact download
-
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
@@ -55,17 +46,17 @@ jobs:
       - name: Unzip artifact
         run: unzip release.zip
 
-      - name: Login to Azure using OIDC
+      - name: Login to Azure
         uses: azure/login@v1.5.0
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          auth-type: 'OIDC'  # Ensure auth type is set to OIDC
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'Chatbot-in-Testing'
           slot-name: 'production'
-          package: ./release.zip
+          package: './'
