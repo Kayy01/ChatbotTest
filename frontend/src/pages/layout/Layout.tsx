@@ -134,25 +134,6 @@ const Layout = () => {
       </Dialog>
     </div>
   )
-import React, { useState } from 'react';
-import './Layout.module.css';
+}
 
-const Layout: React.FC = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    document.body.classList.toggle('dark-mode', !darkMode);
-    setDarkMode(!darkMode);
-  };
-
-  return (
-    <div>
-      <button className="toggleButton" onClick={toggleDarkMode}>
-        {darkMode ? 'Light Mode' : 'Dark Mode'}
-      </button>
-      {children}
-    </div>
-  );
-};
-
-export default Layout;
+export default Layout
