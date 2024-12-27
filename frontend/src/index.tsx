@@ -10,7 +10,11 @@ import { AppStateProvider } from './state/AppProvider'
 
 import './index.css'
 
+<<<<<<< HEAD
 initializeIcons("https://res.cdn.office.net/files/fabric-cdn-prod_20241209.001/assets/icons/")
+=======
+initializeIcons()
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
 
 export default function App() {
   return (

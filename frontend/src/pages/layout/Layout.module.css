@@ -114,11 +114,14 @@
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 body.dark-mode {
   background-color: #000000;
   color: #ffffff;
 }
 
+=======
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
 @media (max-width: 480px) {
   .headerTitleContainer {
     margin-left: 4px;

@@ -22,14 +22,63 @@
   color: #ffffff !important;
 }
 
+<<<<<<< HEAD
 /* Toggle Button */
+=======
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+.header {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #000000; /* Black background */
+  color: #ffffff;           /* White text */
+}
+
+.dark-mode .header {
+  background-color: #000000; /* Dark background for header */
+}
+
+.dark-mode .headerTitle {
+  color: #FFA500; /* Orange title color in dark mode */
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #ffffff; /* White background */
+  color: #000000;           /* Black text */
+}
+
+.light-mode .header {
+  background-color: #f2f2f2; /* Light gray background for header */
+}
+
+.light-mode .headerTitle {
+  color: #242424; /* Dark gray title color in light mode */
+}
+
+/* Toggle Button Styles */
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
 .toggleButton {
   position: fixed;
   top: 10px;
   right: 10px;
   padding: 10px 20px;
   background-color: #FFA500; /* Orange background */
+<<<<<<< HEAD
   color: #ffffff; /* White text */
+=======
+  color: #ffffff;           /* White text */
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
   border: none;
   border-radius: 4px;
   font-weight: 600;
@@ -41,6 +90,7 @@
   background-color: #e69500; /* Darker orange on hover */
 }
 
+<<<<<<< HEAD
 /* Dark Mode */
 .dark-mode {
   background-color: #000000; /* Black background for the layout */
@@ -83,6 +133,8 @@
   border: 1px solid #d1d1d1;
 }
 
+=======
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
 @media (max-width: 480px) {
   .shareButtonRoot {
     width: auto;
@@ -93,8 +145,17 @@
     width: auto;
     padding: 0 8px;
   }
+<<<<<<< HEAD
    .toogleButton {
     width: auto;
     padding: 5px 8px;
   }
 }
+=======
+  
+  .toggleButton { /* Fixed Typo */
+    width: auto;
+    padding: 5px 8px;
+  }
+}
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)

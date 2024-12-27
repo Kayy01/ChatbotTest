@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+=======
+/* Global Variables */
+:root {
+  --primary-color: #115ea3;
+  --secondary-color: #eef6fe;
+  --error-color: rgba(182, 52, 67, 1);
+  --font-color-light: #616161;
+  --font-color-dark: #242424;
+  --background-color: #ffffff;
+  --chat-bg-color: #edf5fd;
+  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
+  --border-radius: 8px;
+  --padding: 16px;
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+  --font-weight-light: 400;
+  --font-weight-bold: 600;
+  --font-weight-heavy: 700;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--font-color-dark);
+  background-color: var(--background-color);
+}
+
+/* Chat Container */
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
 .container {
   flex: 1;
   display: flex;
@@ -8,10 +39,14 @@
 .chatRoot {
   flex: 1;
   display: flex;
+<<<<<<< HEAD
   margin-top: 0px;
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
+=======
+  margin: 0 20px 20px 20px;
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
   gap: 5px;
 }
 
@@ -20,15 +55,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   background: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #ffffff 57.29%, #eef6fe 100%);
   box-shadow:
     0px 2px 4px rgba(0, 0, 0, 0.14),
     0px 0px 2px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
+=======
+  background: radial-gradient(108.78% 108.78% at 50.02% 19.78%, var(--background-color) 57.29%, var(--secondary-color) 100%);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
   overflow-y: auto;
   max-height: calc(100vh - 100px);
 }
 
+<<<<<<< HEAD
 .chatEmptyState {
   flex-grow: 1;
   display: flex;
@@ -66,6 +108,9 @@
   width: auto;
 }
 
+=======
+/* Chat Message Styles */
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
 .chatMessageStream {
   flex-grow: 1;
   max-width: 1028px;
@@ -88,6 +133,7 @@
   position: relative;
   display: flex;
   padding: 20px;
+<<<<<<< HEAD
   background: #edf5fd;
   border-radius: 8px;
   box-shadow:
@@ -98,6 +144,14 @@
   font-size: 14px;
   line-height: 22px;
   color: #242424;
+=======
+  background: var(--chat-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  font-size: var(--font-size-small);
+  line-height: 22px;
+  color: var(--font-color-dark);
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
   order: 0;
   flex-grow: 0;
   white-space: pre-wrap;
@@ -105,6 +159,7 @@
   max-width: 80%;
 }
 
+<<<<<<< HEAD
 .chatMessageGpt {
   margin-bottom: 12px;
   max-width: 80%;
@@ -118,6 +173,13 @@
     rgba(182, 52, 67, 1) 1px 1px 2px,
     rgba(182, 52, 67, 1) 0px 0px 1px;
   color: #242424;
+=======
+.chatMessageError {
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--error-color) 1px 1px 2px, var(--error-color) 0px 0px 1px;
+  color: var(--font-color-dark);
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -126,10 +188,14 @@
 }
 
 .chatMessageErrorContent {
+<<<<<<< HEAD
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+=======
+  font-size: var(--font-size-small);
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
   line-height: 22px;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -137,6 +203,7 @@
   align-items: center;
 }
 
+<<<<<<< HEAD
 .chatInput {
   position: sticky;
   flex: 0 0 100px;
@@ -202,10 +269,58 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
+=======
+/* Empty State */
+.chatEmptyState {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatEmptyStateTitle {
+  font-weight: var(--font-weight-heavy);
+  font-size: var(--font-size-large);
+  text-align: center;
+  line-height: 24px;
+  margin-top: 36px;
+  margin-bottom: 0;
+}
+
+.chatEmptyStateSubtitle {
+  margin-top: 20px;
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-medium);
+  line-height: 150%;
+  text-align: center;
+  color: var(--font-color-light);
+}
+
+/* Buttons */
+.viewSourceButton {
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  padding: 4px 6px;
+  gap: 4px;
+}
+
+.viewSourceButton:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.stopGeneratingContainer {
+  display: flex;
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
   justify-content: center;
   align-items: center;
   padding: 5px 16px;
   gap: 4px;
+<<<<<<< HEAD
   position: absolute;
   width: 161px;
   height: 32px;
@@ -213,11 +328,19 @@
   bottom: 116px;
   border: 1px solid #d1d1d1;
   border-radius: 16px;
+=======
+  border: 1px solid #d1d1d1;
+  border-radius: 16px;
+  position: absolute;
+  left: calc(50% - 161px / 2 + 25.8px);
+  bottom: 116px;
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
 }
 
 .stopGeneratingIcon {
   width: 14px;
   height: 14px;
+<<<<<<< HEAD
   color: #424242;
 }
 
@@ -236,10 +359,23 @@
   flex-grow: 0;
 }
 
+=======
+  color: var(--font-color-dark);
+}
+
+.stopGeneratingText {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--font-color-dark);
+}
+
+/* Citation Panel */
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
 .citationPanel {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+<<<<<<< HEAD
   padding: 16px 16px;
   gap: 8px;
   background: #ffffff;
@@ -250,12 +386,20 @@
   flex: auto;
   order: 0;
   align-self: stretch;
+=======
+  padding: var(--padding);
+  gap: 8px;
+  background: var(--background-color);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
   flex-grow: 0.3;
   max-width: 30%;
   overflow-y: scroll;
   max-height: calc(100vh - 100px);
 }
 
+<<<<<<< HEAD
 .citationPanelHeaderContainer {
   width: 100%;
 }
@@ -288,6 +432,16 @@
   font-size: 16px;
   line-height: 22px;
   color: #323130;
+=======
+.citationPanelHeader {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-medium);
+}
+
+.citationPanelTitle {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-small);
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
   margin-top: 12px;
   margin-bottom: 12px;
 }
@@ -297,6 +451,7 @@
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .citationPanelContent {
   font-style: normal;
   font-weight: 400;
@@ -370,6 +525,41 @@ a {
   border-radius: 4px;
 }
 
+=======
+.citationPanelDismiss {
+  width: 18px;
+  height: 18px;
+  color: var(--font-color-dark);
+}
+
+.citationPanelDismiss:hover {
+  background-color: #d1d1d1;
+  cursor: pointer;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #242424;
+    --secondary-color: #333;
+    --font-color-dark: #ffffff;
+    --font-color-light: #bbbbbb;
+    --chat-bg-color: #444;
+    --error-color: rgba(255, 0, 0, 1);
+  }
+
+  .container, .chatRoot, .chatContainer {
+    background-color: var(--background-color);
+    color: var(--font-color-dark);
+  }
+
+  .viewSourceButton, .stopGeneratingText {
+    color: var(--font-color-dark);
+  }
+}
+
+/* Responsive Styles */
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
 @media (max-width: 480px) {
   .chatInput {
     width: 90%;

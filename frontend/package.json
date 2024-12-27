@@ -15,7 +15,11 @@
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@fluentui/react": "^8.109.0",
+=======
+    "@fluentui/react": "^8.105.3",
+>>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
     "@fluentui/react-hooks": "^8.6.29",
     "@fluentui/react-icons": "^2.0.195",
     "dompurify": "^3.0.8",
