@@ -20,7 +20,7 @@ export const ShareButton: React.FC<ButtonProps> = ({ onClick, text }) => {
 
 export const darkModeButton: React.FC<ButtonProps> = ({ onClick, text }) => {
   return (
-    <DefaultButton
+    <CommandBarButton
       className={styles.darkModeButtonRoot}
       text={text}
       iconProps={{ iconName: 'Mode' }}
