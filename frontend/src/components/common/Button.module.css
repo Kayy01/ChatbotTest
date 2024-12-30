@@ -150,6 +150,7 @@ body {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    .toogleButton {
     width: auto;
     padding: 5px 8px;
@@ -166,3 +167,34 @@ body {
 =======
 }
 >>>>>>> 6d03c6c (Refactor and update components for improved theme handling)
+=======
+}
+
+.darkModeButtonRoot {
+  border-radius: 4px;
+  background: radial-gradient(109.81% 107.82% at 100.1% 90.19%, #333333 33.63%, #555555 70.31%, #777777 100%);
+  padding: 5px 12px;
+}
+
+.darkModeButtonRoot:hover {
+  background: linear-gradient(135deg, #333333 0%, #555555 51.04%, #777777 100%);
+}
+
+.darkModeButtonRoot span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.darkModeButtonRoot i,
+.darkModeButtonRoot:hover i {
+  color: #ffffff !important;
+}
+
+@media (max-width: 480px) {
+  .darkModeButtonRoot {
+    padding: 4px 10px;
+  }
+}
+>>>>>>> 1c98b84 (Modified ThemeToggle.js)
