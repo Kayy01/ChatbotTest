@@ -3,6 +3,7 @@ import { CommandBarButton, IconButton, Dialog, DialogType, Stack } from '@fluent
 import { SquareRegular, ShieldLockRegular, ErrorCircleRegular } from '@fluentui/react-icons'
 
 import ReactMarkdown from 'react-markdown'
+
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import uuid from 'react-uuid'
@@ -12,7 +13,9 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import styles from './Chat.module.css'
+import ThemeToggle from '../../components/ThemeToggle'
 import Contoso from '../../assets/Contoso.svg'
+
 import { XSSAllowTags } from '../../constants/sanatizeAllowables'
 
 import {

@@ -23,6 +23,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Toggle Button */
 =======
 /* General Styles */
@@ -135,6 +136,8 @@ body {
 
 =======
 >>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
+=======
+>>>>>>> 6d03c6c (Refactor and update components for improved theme handling)
 @media (max-width: 480px) {
   .shareButtonRoot {
     width: auto;
@@ -145,6 +148,7 @@ body {
     width: auto;
     padding: 0 8px;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
    .toogleButton {
     width: auto;
@@ -159,3 +163,6 @@ body {
   }
 }
 >>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
+=======
+}
+>>>>>>> 6d03c6c (Refactor and update components for improved theme handling)

@@ -102,6 +102,7 @@
   color: #242424;
 }
 
+<<<<<<< HEAD
 .toggleButton {
   position: fixed;
   top: 10px;
@@ -122,6 +123,8 @@ body.dark-mode {
 
 =======
 >>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
+=======
+>>>>>>> 6d03c6c (Refactor and update components for improved theme handling)
 @media (max-width: 480px) {
   .headerTitleContainer {
     margin-left: 4px;
