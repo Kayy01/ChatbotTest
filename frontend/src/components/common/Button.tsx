@@ -1,10 +1,9 @@
-import { CommandBarButton, DefaultButton, IButtonProps } from '@fluentui/react'
-
-import styles from './Button.module.css'
+import { CommandBarButton, DefaultButton, IButtonProps } from '@fluentui/react';
+import styles from './Button.module.css';
 
 interface ButtonProps extends IButtonProps {
-  onClick: () => void
-  text: string | undefined
+  onClick: () => void;
+  text: string;
 }
 
 export const ShareButton: React.FC<ButtonProps> = ({ onClick, text }) => {
@@ -13,18 +12,21 @@ export const ShareButton: React.FC<ButtonProps> = ({ onClick, text }) => {
       className={styles.shareButtonRoot}
       iconProps={{ iconName: 'Share' }}
       onClick={onClick}
-      text={text}
-    />
-  )
-}
+    >
+      {text}
+    </CommandBarButton>
+  );
+};
 
-export const darkModeButton: React.FC<ButtonProps> = ({ onClick, text }) => {
+export const DarkModeButton: React.FC<ButtonProps> = ({ onClick, text }) => {
   return (
     <CommandBarButton
       className={styles.darkModeButtonRoot}
-      text={text}
       iconProps={{ iconName: 'Mode' }}
       onClick={onClick}
-    />
-  )
-}
+    >
+      {text}
+    </CommandBarButton>
+  );
+};
+
