@@ -18,7 +18,7 @@ const Layout = () => {
   const [hideHistoryLabel, setHideHistoryLabel] = useState<string>('Hide chat history');
   const [showHistoryLabel, setShowHistoryLabel] = useState<string>('Show chat history');
   const [logo, setLogo] = useState('');
-  const [isDarkMode, setIsDarkMode] = useState(false); // State for dark mode toggle
+  const [isDarkMode, setIsDarkMode] = useState<string | undefined>('Mode');// State for dark mode toggle
   const appStateContext = useContext(AppStateContext);
   const ui = appStateContext?.state.frontendSettings?.ui;
 
