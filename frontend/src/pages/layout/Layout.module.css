@@ -102,7 +102,7 @@
   color: #242424;
 }
 
-<<<<<<< HEAD
+
 .toggleButton {
   position: fixed;
   top: 10px;
@@ -115,16 +115,33 @@
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 body.dark-mode {
   background-color: #000000;
   color: #ffffff;
 }
 
-=======
->>>>>>> e6215ba (modified:   frontend/src/components/Answer/Answer.tsx)
-=======
->>>>>>> 6d03c6c (Refactor and update components for improved theme handling)
+
+.darkModeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.darkModeButton {
+  color: #ffffff;
+}
+
+.darkModeText {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
 @media (max-width: 480px) {
   .headerTitleContainer {
     margin-left: 4px;
